@@ -182,122 +182,15 @@
 		字数：1.7k字 | 预计阅读时长：6分钟
 	</div>
       
-        <h1 id="Hexo-博客的搭建教程-——借鉴中学习，初次搭建博客"><a href="#Hexo-博客的搭建教程-——借鉴中学习，初次搭建博客" class="headerlink" title="Hexo 博客的搭建教程 ——借鉴中学习，初次搭建博客"></a>Hexo 博客的搭建教程 ——借鉴中学习，初次搭建博客</h1><p>这也是我首个博客搭建的过程，参考于b站UP主： <a href="https://space.bilibili.com/384068749/" target="_blank" rel="noopener">CodeSheep</a> 的视频，感谢大佬的分享</p>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=547780876&auto=1&height=66"></iframe>
+
+<h1 id="Hexo-博客的搭建教程-——借鉴中学习，初次搭建博客"><a href="#Hexo-博客的搭建教程-——借鉴中学习，初次搭建博客" class="headerlink" title="Hexo 博客的搭建教程 ——借鉴中学习，初次搭建博客"></a>Hexo 博客的搭建教程 ——借鉴中学习，初次搭建博客</h1><p>这也是我首个博客搭建的过程，参考于b站UP主： <a href="https://space.bilibili.com/384068749/" target="_blank" rel="noopener">CodeSheep</a> 的视频，感谢大佬的分享</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>首先确定要部署的环境是用免费的还是用收费，当然两者的区别自然很明显：</p>
 <p>​            一个完全免费，但免费的空间自然会有着一些限制</p>
 <p>​            也可以选择自己购买域名和空间</p>
-<p>当然，对于新手来说推荐使用 GitHub 来搭建博客，好处如以下几点：</p>
-<ul>
-<li>免费， GitHub 是提供无限流量的。</li>
-<li>都是静态文件，所以访问速度很理想。</li>
-<li>拥有绝对的管理权，又能够享受Git的版本管理功能，不用担心文章的丢失。</li>
-</ul>
-<p>部署的地址聊完了，那么在说说 Hexo 的优点，Hexo 是基于 Node.js 的一款静态博客框架，同时 Hexo 是支持 Markdown 语法，编辑文章会更加方便，快捷。</p>
-<p>所以想要搭建博客，又不想直接写页面的话，推荐使用 Hexo ，其中主题也是能够替换的。</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>Hexo 文档有完整的安装和使用的介绍，推荐阅读。</p>
-<p>本文是我自己安装的步骤，和一些遇到过的问题，由于UP主：<a href="https://space.bilibili.com/384068749/" target="_blank" rel="noopener">CodeSheep</a> 的视频中所使用的是 Mac OS ，如果是Mac 的小伙伴可以通过连接去看他的视频，我主要写的内容是针对于Windows的。</p>
-<p>在安装 Hexo 之前 ，请确认电脑是否安装了：</p>
-<ul>
-<li>Node.js</li>
-<li>Git</li>
-</ul>
-<p>然后确认是否有 GitHub 账号，如果没有请注册。</p>
-<p>[^注]: 一定要去邮箱确认注册，否则无法使用 GitHub 的空间</p>
-<h2 id="安装软件（必备）"><a href="#安装软件（必备）" class="headerlink" title="安装软件（必备）"></a>安装软件（必备）</h2><p>​    node.js 的官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a></p>
-<p>​    Git 的官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-<p>找到适合自己电脑的版本进行安装即可。</p>
-<p>注意：安装的过程中可以不装在C盘，但安装目录尽量不要使用中文路径和带空格的文件夹。</p>
-<p>个人踩雷：</p>
-<ul>
-<li>Git 在安装到有中文路径下后Git Bash启动时会提示找不到文件的弹窗，但也能用。</li>
-<li>node.js 在安装到有空格的路径下后，会报错（安装路径选择时有提示，但是是英文）</li>
-</ul>
-<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p> 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。在cmd命令行输入如下命令: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>这是 Windows 的输入方法，Mac 则需要先把用户变更为管理员，在终端输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>[^这是个小区别]: Hexo官网的命令是Windows的安装，Mac安装时要在前面加上 sudo，进行全局安装 ，否则会因为权限问题报错。</p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>从此处开始更换为 Git Bash ，在桌面右键会出现。</p>
-<p><img src="C:%5CUsers%5CYaomoula%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1574584707868.png" alt="1574584707868"></p>
-<p>[^注]: Git Bash 与 Mac 的终端和Linux的命令行的指令是一致的</p>
-<p>使用命令指定到一个目录，执行命令 (命令中的<code>blog</code>是您将要建立的文件夹的名称)： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-
-<p>使用终端<code>cd</code>到<code>blog</code>文件夹下，执行以下命令，安装npm：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>好了，现在可以试试看是否已经初始化成功，执行如下命令，开启本地 Hexo 服务器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>此时，浏览器中打开网址(默认是4000端口) <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p>​                                                </p>
-<h2 id="关联-GitHub"><a href="#关联-GitHub" class="headerlink" title="关联 GitHub"></a>关联 GitHub</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><ol>
-<li>登录您的 GitHub 账号，新建名称为<code>您的用户名.github.io</code>的仓库。假设我的 GitHub 账号的用户名是 <code>luxun</code>，那么我就应该新建名称为<code>luxun.github.io</code>的仓库。</li>
-<li><code>Description</code>可写可不写，随意。</li>
-<li>勾上<code>Initialize this repository with a README</code>。</li>
-<li>点击<code>Create Repository</code>完成创建。</li>
-</ol>
-<h3 id="开启-GitHub-Pages"><a href="#开启-GitHub-Pages" class="headerlink" title="开启 GitHub Pages"></a>开启 GitHub Pages</h3><p>点击<code>Settings</code>，你将会打开这个库的 Settings 页面，向下拖动，直到看见 GitHub Pages。</p>
-<h3 id="修改全局配置文件"><a href="#修改全局配置文件" class="headerlink" title="修改全局配置文件"></a>修改全局配置文件</h3><p>Hexo 官方文档中有对全局配置的详细说明，推荐阅读。</p>
-<blockquote>
-<p>小坑提醒，修改本地所有的配置文件时，注意所有的冒号<code>:</code>后边都要加一个空格，否则执行 Hexo 命令时会报错，一定注意。</p>
-</blockquote>
-<p>找到本地<code>blog</code>文件夹下<code>_config.yml</code>，打开后滑到最后，修改成下边的样子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy:  type: git  repository: https://github.com/xxx/xxx.github.io.git  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>您需要将<code>repository</code>后的所有<code>xxx</code>换成你自己的用户名。    </p>
-<p>然后，您需要为自己配置身份信息，终端输入<code>yourname</code>和<code>youremail</code>换成您自己的 GitHub 用户名和邮箱)：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-
-<p>终端<code>cd</code>到<code>blog</code>文件夹下执行生成静态页面命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<p>此时若出现如下报错：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Local hexo not found in ~/blogERROR Try runing: &apos;npm install hexo --save&apos;</span><br></pre></td></tr></table></figure>
-
-<p>尝试执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --save</span><br></pre></td></tr></table></figure>
-
-<p>若无报错，自行忽略此步骤。</p>
-<p>然后在当前目录下，终端输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>这里踩了个坑，如果您执行命令<code>hexo d</code>仍然报错：无法连接 git 或找不到 git，则执行如下命令来安装<code>hexo-deployer-git</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>完成安装之后，再次执行<code>hexo g</code>和<code>hexo d</code>命令。</p>
-<p>随后按照提示，分别输入自己的 GitHub 用户名和密码，开始上传。</p>
-<p>完成上传之后，通过<code>http://xxx.github.io/</code> (<code>xxx</code>换成您自己的仓库名，也就是用户名)来访问自己刚刚上传的网站。</p>
-<ul>
-<li>为避免每次输入 GitHub 用户名和密码的麻烦，可参照后文 <strong>优化(个性化设置)</strong> <code>添加ssh key 到 GitHub</code>进行优化</li>
-</ul>
-<h2 id="常用指令和发布文章"><a href="#常用指令和发布文章" class="headerlink" title="常用指令和发布文章"></a>常用指令和发布文章</h2><ul>
-<li>常用指令</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot;        //新建文章hexo new page &quot;pageName&quot;        //新建页面hexo g          //生成静态页面至public目录hexo server         //开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）hexo deploy         //将.deploy目录部署到GitHub</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>常用组合</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cleanhexo ghexo dhexo d -g #生成部署hexo s -g #生成预览</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>发布文章</li>
-</ul>
-<p>终端<code>cd</code>到<code>blog</code>文件夹下，执行如下命令新建文章：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;xxx&quot;</span><br></pre></td></tr></table></figure>
-
-<p>名为<code>xxx.md</code>的文件会建在目录<code>.../blog/source/_posts</code>下。</p>
-<p>所有的文章都会以<code>md</code>形式保存在<code>_post</code>文件夹中，只要在<code>_post</code>文件夹中新建<code>md</code>类型的文档，就能在执行<code>hexo g</code>的时候被渲染。新建的文章头需要添加一些信息，如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---title: xxx    //在此处添加你的标题。date: 2016-10-07 13:38:49   //在此处输入编辑这篇文章的时间。tags: xxx    //在此处输入这篇文章的标签。categories: xxx    //在此处输入这篇文章的分类。---</span><br></pre></td></tr></table></figure>
-
-<p>文章编辑完成后，终端<code>cd</code>到<code>blog</code>文件夹下，依次执行如下命令来发布：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo ghexo d</span><br></pre></td></tr></table></figure>
-
-<p>至此，搭建基于 GitHub Pages + Hexo 的博客就完成了。</p>
-<h3 id="大概就这么多了，如果有不足的，后续会进行补充。。。。。"><a href="#大概就这么多了，如果有不足的，后续会进行补充。。。。。" class="headerlink" title="大概就这么多了，如果有不足的，后续会进行补充。。。。。"></a>大概就这么多了，如果有不足的，后续会进行补充。。。。。</h3>
+        
+          <a class="article-more-a" href="/2019/11/24/hexo%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/#more">more >></a>
+        
       
 
 
@@ -373,17 +266,9 @@
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<p>默认生成文本</p>
-
+        
+          <a class="article-more-a" href="/2019/11/21/hello-world/#more">more >></a>
+        
       
 
 
